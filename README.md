@@ -10,4 +10,7 @@ Simply open https://caiopskk.github.io/pokedex-project/ to start exploring the c
 
 Feel free to customize this description to better fit your project and personal style!
 
+> [!NOTE]
+> Feel free to customize this description to better fit your project and personal style!
+
 ![image](https://github.com/caiopskk/pokedex-project/assets/90821189/75bb1d2e-6697-45c9-8bf4-0a61c4da62d3)
