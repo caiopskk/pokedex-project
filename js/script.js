@@ -21,37 +21,58 @@ const fetchPokemon = async pokemon => {
 };
 
 const renderPokemon = async pokemon => {
-  pokemonName.innerHTML = 'Searching...';
-  pokemonNumber.innerHTML = '';
+  if (pokemonName.innerHTML !== '') {
+    pokemonName.innerHTML = '...';
+    pokemonNumber.innerHTML = '...';
+  }
 
-  const data = await fetchPokemon(pokemon);
+  let data;
+  if (isNaN(pokemon)) {
+    data = await fetchPokemon(pokemon.toLowerCase());
+  } else {
+    data = await fetchPokemon(pokemon);
+  }
 
   if (data) {
-    pokemonName.innerHTML = data.name;
-    pokemonNumber.innerHTML = data.id;
+    pokemonName.innerHTML = data.name || 'Name not found';
+    pokemonNumber.innerHTML = data.id || 'ID not found';
     pokemonImage.src =
-      data['sprites']['versions']['generation-v']['black-white']['animated'][
-        'front_default'
-      ];
+      data.sprites?.versions?.['generation-v']?.['black-white']?.animated
+        ?.front_default || '';
     input.value = '';
     searchPokemon = data.id;
-  } else {
-    pokemonName.innerHTML = 'Not found :(';
-    pokemonNumber.innerHTML = '';
   }
 };
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  renderPokemon(input.value.toLowerCase());
+  const searchTerm = input.value.trim();
+  if (!isNaN(searchTerm)) {
+    renderPokemon(parseInt(searchTerm));
+  } else {
+    renderPokemon(searchTerm);
+  }
+});
+
+input.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    form.dispatchEvent(new Event('submit'));
+  }
 });
 
 buttonPrev.addEventListener('click', () => {
-  searchPokemon -= 1;
-  renderPokemon(searchPokemon);
+  if (searchPokemon > 1) {
+    searchPokemon -= 1;
+    renderPokemon(searchPokemon);
+  } else {
+    console.log('Já está no primeiro Pokémon');
+  }
 });
+
 buttonNxt.addEventListener('click', () => {
   searchPokemon += 1;
   renderPokemon(searchPokemon);
 });
+
 renderPokemon(searchPokemon);

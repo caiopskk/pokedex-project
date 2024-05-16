@@ -7,7 +7,7 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/favicons/favicon-16x16.png"
+      href="./favicons/favicon-16x16.png"
     />
     <link rel="stylesheet" href="./css/styles.css" />
 
@@ -16,18 +16,21 @@
 
   <body>
     <main>
-      <img src="" alt="pokemon" class="pokemonImg" />
-      <img src="./images/pokedex.png" alt="pokedex" class="pokedex" />
-      <h1 class="pokemonData">
-        <span class="pokemonNumber"></span> -
-        <span class="pokemonName"></span>
-      </h1>
+      <div>
+        <img src="" alt="pokemon" class="pokemonImg" />
+        <img src="./images/pokedex.png" alt="pokedex" class="pokedex" />
+      </div>
+      <div class="pokemonData">
+        <span class="pokemonName">-</span>
+      </div>
+      <div class="pokemonNumber"><span></span></div>
       <form class="form">
         <div class="buttons">
-          <button class="button btn-prev">&lt Prev</button>
-          <button class="button btn-next">Next &gt</button>
+          <button class="button btn-prev"></button>
+          <button class="button btn-next"></button>
         </div>
-
+        <input type="text" class="inputSearch" placeholder="Search" />
+        <button type="submit" class="btn-search"></button>
         <script defer src="./js/script.js"></script>
       </form>
     </main>
