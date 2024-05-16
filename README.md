@@ -6,7 +6,7 @@ This project is one of the first I've undertaken, inspired by my passion for Pok
 - Simple and intuitive user interface.
 - Built with HTML, CSS, and JavaScript for a lightweight and efficient experience.
 2. How to Use:
-- Simply open https://caiopskk.github.io/pokedex-project/ to start exploring the collections of animated stylized Pokémon images! Use the D-pad to prev and next or search in the searchbox below pokemon image.
+- Simply open https://caiopskk.github.io/pokedex-project/ to start exploring the collection of animated and stylized Pokémon images! Use the D-pad to prev and next or search in the searchbox below pokemon image.
 
 > [!NOTE]
 > Feel free to fork, clone or download this repository to better fit your idea and personal style!
