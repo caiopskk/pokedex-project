@@ -2,11 +2,11 @@
 This project is one of the first I've undertaken, inspired by my passion for Pokémon. It's a simple Pokedex application built using HTML, CSS, and JavaScript. With this project, I aimed to create a visually appealing interface where users can browse through and view information about various Pokémon species.
 
 Features:
-View detailed information about almost all Pokémon species.
+View animated images of almost all Pokémons.
 Simple and intuitive user interface.
 Built with HTML, CSS, and JavaScript for a lightweight and efficient experience.
 How to Use:
-Simply open the HTML file in your web browser to start exploring the world of Pokémon!
+Simply open https://caiopskk.github.io/pokedex-project/ to start exploring the collections of animated stylized Pokémon images! Use the D-pad to prev and next or search in the searchbox below pokemon image.
 
 Feel free to customize this description to better fit your project and personal style!
 
